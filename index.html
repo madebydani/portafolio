@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniel Chorro · Desarrollador multiplataforma y diseñador gráfico</title>
+  <meta name="description" content="Portafolio de Daniel Chorro: desarrollador de aplicaciones multiplataforma en formación con base de diseño gráfico. Apps de escritorio, Android y web.">
+  <meta name="author" content="Daniel Chorro">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://madebydani.github.io/portafolio/">
+
+  <!-- Vista previa al compartir el enlace -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Daniel Chorro">
+  <meta property="og:url" content="https://madebydani.github.io/portafolio/">
+  <meta property="og:title" content="Daniel Chorro · Desarrollador multiplataforma y diseñador gráfico">
+  <meta property="og:description" content="De la idea a la app que funciona. Apps de escritorio, Android y web, con base de diseño gráfico.">
+  <meta property="og:image" content="https://madebydani.github.io/portafolio/assets/img/og.png">
+  <meta property="og:image:alt" content="Daniel Chorro, desarrollador multiplataforma y diseñador gráfico">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Se ejecuta antes de pintar la página para aplicar el tema guardado sin parpadeos -->
+  <script>
+    let theme = localStorage.getItem('theme');
+    if (!theme) theme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = theme;
+  </script>
+</head>
+<body>
+
+  <!-- Iconos: se definen una vez aquí y se reutilizan con <use href="#i-nombre"> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <!-- Monograma: una «d» y un cursor de texto -->
+    <symbol id="i-mark" viewBox="0 0 32 32"><circle cx="12.5" cy="19.5" r="6" fill="none" stroke="currentColor" stroke-width="4"/><path d="M18.5 5v20.5" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="butt"/><rect class="cursor" x="24" y="11.5" width="3.5" height="16" stroke="none"/></symbol>
+    <!-- Boceto de app móvil para los proyectos que todavía no tienen captura -->
+    <symbol id="i-sketch" viewBox="0 0 170 300">
+      <rect class="ph-line" x="6" y="6" width="158" height="330" rx="20"/>
+      <circle class="ph-fill" cx="38" cy="50" r="15"/>
+      <rect class="ph-fill" x="64" y="38" width="70" height="9" rx="3"/>
+      <rect class="ph-fill" x="64" y="54" width="44" height="7" rx="3"/>
+      <rect class="ph-line" x="22" y="88" width="126" height="92" rx="10"/>
+      <polyline class="ph-accent" points="34,160 58,146 80,152 104,126 134,112"/>
+      <rect class="ph-fill" x="22" y="198" width="58" height="42" rx="8"/>
+      <rect class="ph-fill" x="90" y="198" width="58" height="42" rx="8"/>
+    </symbol>
+  </svg>
+
+  <a href="#contenido" class="skip-link" data-i18n="a11y.skip">Saltar al contenido</a>
+
+  <!-- ============================ CABECERA ============================ -->
+  <header class="header" id="header">
+    <div class="wrap header__inner">
+      <a href="#inicio" class="brand" data-i18n-aria="a11y.home" aria-label="Daniel Chorro, ir al inicio">
+        <svg class="brand__mark" aria-hidden="true"><use href="#i-mark"/></svg>
+        <span>Daniel Chorro</span>
+      </a>
+
+      <nav class="nav" id="nav" data-i18n-aria="a11y.nav" aria-label="Secciones">
+        <a class="nav__link" href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a class="nav__link" href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a class="nav__link" href="#stack" data-i18n="nav.stack">Stack</a>
+        <a class="nav__link" href="#formacion" data-i18n="nav.education">Formación</a>
+        <a class="nav__link" href="#contacto" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="header__tools">
+        <button class="tool-btn lang-btn" id="lang-toggle" type="button" data-i18n-aria="a11y.lang" aria-label="Cambiar idioma a inglés">
+          <span data-lang="es" class="is-active">ES</span><span class="sep">/</span><span data-lang="en">EN</span>
+        </button>
+        <button class="tool-btn theme-btn" id="theme-toggle" type="button" data-i18n-aria="a11y.theme" aria-label="Cambiar entre tema claro y oscuro">
+          <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <button class="tool-btn menu-btn" id="menu-toggle" type="button" aria-controls="nav" aria-expanded="false" data-i18n-aria="a11y.menu" aria-label="Abrir o cerrar el menú">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============================= PORTADA ============================ -->
+    <section class="hero" id="inicio">
+      <div class="wrap">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Portafolio — Desarrollo y diseño</p>
+
+        <div class="hero__grid">
+          <div>
+            <p class="hero__hello" data-i18n="hero.hello">Hola, soy</p>
+            <!-- El nombre aparece «seleccionado» como en un programa de diseño:
+                 marco, tiradores en las esquinas y medidas reales (las pone main.js) -->
+            <h1 class="hero__name" id="hero-name">Daniel<br>Chorro</h1>
+          </div>
+
+          <div class="hero__intro">
+            <p class="hero__role"><span data-i18n="hero.role">Desarrollador multiplataforma y diseñador gráfico</span></p>
+            <p class="hero__lede" data-i18n="hero.lede">Estudio Desarrollo de Aplicaciones Multiplataforma y vengo del diseño gráfico. Construyo apps de escritorio, Android y web cuidando tanto <strong>cómo funcionan</strong> como <strong>cómo se ven</strong>.</p>
+            <ul class="hero__links">
+              <li><a class="link" href="#proyectos"><span data-i18n="nav.projects">Proyectos</span><svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a></li>
+              <li><a class="link" href="https://github.com/madebydani" target="_blank" rel="noopener noreferrer">GitHub<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+              <li><a class="link" href="#contacto"><span data-i18n="nav.contact">Contacto</span><svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROYECTOS =========================== -->
+    <section class="section" id="proyectos" aria-labelledby="projects-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label" data-i18n="projects.label">// proyectos</p>
+          <h2 class="section__title" id="projects-title" data-i18n="projects.title">Lo que he construido.</h2>
+          <p class="section__intro" data-i18n="projects.intro">Proyectos propios y de clase. El código de todos está publicado en GitHub.</p>
+        </header>
+
+        <!-- Filtro por tecnología: las opciones se generan desde projects.js -->
+        <div class="filter">
+          <span class="filter__prompt" data-i18n="filter.prompt">ls proyectos --tech</span>
+          <details class="filter__menu" id="filter">
+            <summary>
+              <span class="sr-only" data-i18n="filter.label">Filtrar por tecnología:</span>
+              <span id="filter-current">Todos</span>
+            </summary>
+            <ul id="filter-options"></ul>
+          </details>
+          <span id="filter-count" aria-live="polite"></span>
+        </div>
+
+        <!-- Las tarjetas se generan desde assets/js/projects.js -->
+        <div class="projects" id="projects"></div>
+        <noscript>
+          <p>Puedes ver todos mis proyectos en <a class="link" href="https://github.com/madebydani?tab=repositories">mi perfil de GitHub</a>.</p>
+        </noscript>
+
+        <p class="projects__more">
+          <span data-i18n="projects.more">¿Quieres ver el resto?</span>
+          <a class="link" href="https://github.com/madebydani?tab=repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="projects.moreLink">Todos mis repositorios en GitHub</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ SOBRE MÍ ============================ -->
+    <section class="section" id="sobre-mi" aria-labelledby="about-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label" data-i18n="about.label">// sobre mí</p>
+          <h2 class="section__title" id="about-title" data-i18n="about.title">Me gusta construir cosas que se pueden usar.</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__text">
+            <p data-i18n="about.p1">Lo que más disfruto de programar es la parte de construir: coger una idea, darle forma y llegar a algo que funciona.</p>
+            <p data-i18n="about.p2">Antes de programar estudié Diseño Gráfico, y se nota en cómo trabajo. Me importa que una app resuelva bien el problema, pero también la jerarquía, el espaciado y los pequeños detalles de la interfaz. Por eso me gusta llevar un proyecto de principio a fin: desde el primer boceto hasta verlo funcionando en un móvil, en el escritorio o en el navegador.</p>
+            <p data-i18n="about.p3">Por mi cuenta creo herramientas propias para resolver problemas que me encuentro en el día a día con el ordenador. También estoy explorando los agentes de IA, que veo como un aliado más del desarrollador: me ahorran tiempo en las tareas repetitivas y me dejan dedicar más energía a lo que de verdad importa del proyecto.</p>
+            <p data-i18n="about.p4">Ahora mismo estoy terminando de formarme y ganando experiencia con proyectos reales.</p>
+          </div>
+
+          <ul class="areas">
+            <li class="area">
+              <span class="area__num" aria-hidden="true">A.</span>
+              <h3 data-i18n="areas.mobile.t">Apps móviles</h3>
+              <p data-i18n="areas.mobile.d">Aplicaciones Android nativas, desde la interfaz hasta la conexión con los datos.</p>
+            </li>
+            <li class="area">
+              <span class="area__num" aria-hidden="true">B.</span>
+              <h3 data-i18n="areas.web.t">Web</h3>
+              <p data-i18n="areas.web.d">Interfaces modernas y responsivas, y los servicios que les dan vida por detrás.</p>
+            </li>
+            <li class="area">
+              <span class="area__num" aria-hidden="true">C.</span>
+              <h3 data-i18n="areas.backend.t">Escritorio, backend y datos</h3>
+              <p data-i18n="areas.backend.d">Herramientas de escritorio, lógica de negocio, bases de datos y módulos a medida para Odoo.</p>
+            </li>
+            <li class="area">
+              <span class="area__num" aria-hidden="true">D.</span>
+              <h3 data-i18n="areas.design.t">Diseño gráfico</h3>
+              <p data-i18n="areas.design.d">Composición, identidad visual y diseño digital con las herramientas de Adobe.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== STACK ============================= -->
+    <section class="section" id="stack" aria-labelledby="stack-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label" data-i18n="stack.label">// stack</p>
+          <h2 class="section__title" id="stack-title" data-i18n="stack.title">Con qué trabajo.</h2>
+          <p class="section__intro" data-i18n="stack.intro">Tecnologías y herramientas que uso en clase y en mis proyectos. Sin barras de porcentaje: lo que sé hacer se ve mejor en los proyectos.</p>
+        </header>
+
+        <div class="stack">
+          <div class="stack__row">
+            <div class="stack__group">
+              <h3 data-i18n="stack.mobile.t">Móvil</h3>
+              <p data-i18n="stack.mobile.d">Android nativo</p>
+            </div>
+            <ul class="tags">
+              <li class="tag">Kotlin</li><li class="tag">Java</li><li class="tag">Jetpack Compose</li><li class="tag">Android Studio</li><li class="tag">Gradle</li><li class="tag">Firebase</li>
+            </ul>
+          </div>
+          <div class="stack__row">
+            <div class="stack__group">
+              <h3 data-i18n="stack.front.t">Frontend</h3>
+              <p data-i18n="stack.front.d">Interfaces web</p>
+            </div>
+            <ul class="tags">
+              <li class="tag">HTML5</li><li class="tag">CSS3</li><li class="tag">JavaScript</li><li class="tag">TypeScript</li><li class="tag">React</li><li class="tag">Next.js</li><li class="tag">Tailwind CSS</li>
+            </ul>
+          </div>
+          <div class="stack__row">
+            <div class="stack__group">
+              <h3 data-i18n="stack.back.t">Backend y escritorio</h3>
+              <p data-i18n="stack.back.d">Lógica, servicios y apps de escritorio</p>
+            </div>
+            <ul class="tags">
+              <li class="tag">Python</li><li class="tag">PyQt6</li><li class="tag">Node.js</li><li class="tag">PHP</li><li class="tag">C#</li><li class="tag">.NET</li><li class="tag">C</li>
+            </ul>
+          </div>
+          <div class="stack__row">
+            <div class="stack__group">
+              <h3 data-i18n="stack.data.t">Datos y ERP</h3>
+              <p data-i18n="stack.data.d">Bases de datos y módulos a medida</p>
+            </div>
+            <ul class="tags">
+              <li class="tag">MySQL</li><li class="tag">SQLite</li><li class="tag">PL/SQL</li><li class="tag">Oracle APEX</li><li class="tag">Supabase</li><li class="tag">Odoo</li>
+            </ul>
+          </div>
+          <div class="stack__row">
+            <div class="stack__group">
+              <h3 data-i18n="stack.tools.t">Herramientas</h3>
+              <p data-i18n="stack.tools.d">El día a día</p>
+            </div>
+            <ul class="tags">
+              <li class="tag">Git</li><li class="tag">GitHub</li><li class="tag">Visual Studio Code</li><li class="tag">Netlify</li>
+            </ul>
+          </div>
+          <div class="stack__row">
+            <div class="stack__group">
+              <h3 data-i18n="stack.design.t">Diseño</h3>
+              <p data-i18n="stack.design.d">Gráfico, editorial y vídeo</p>
+            </div>
+            <ul class="tags">
+              <li class="tag">Adobe Photoshop</li><li class="tag">Adobe Illustrator</li><li class="tag">Adobe InDesign</li><li class="tag">Adobe Premiere Pro</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FORMACIÓN =========================== -->
+    <section class="section" id="formacion" aria-labelledby="edu-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label" data-i18n="edu.label">// formación</p>
+          <h2 class="section__title" id="edu-title" data-i18n="edu.title">Sistemas, diseño y, ahora, desarrollo.</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="edu edu--current">
+            <p class="edu__when" data-i18n="edu.dam.when">2025 — Actualidad</p>
+            <div class="edu__body">
+              <p class="edu__level"><span data-i18n="edu.cfgs">Ciclo Formativo de Grado Superior</span><span class="badge" data-i18n="edu.current">En curso</span></p>
+              <h3 class="edu__title" data-i18n="edu.dam.t">Desarrollo de Aplicaciones Multiplataforma</h3>
+              <p class="edu__desc" data-i18n="edu.dam.d">Programación, bases de datos, acceso a datos, desarrollo de interfaces y sistemas informáticos: entender un proyecto de forma completa, desde la idea y el diseño de la interfaz hasta la lógica, los datos y el despliegue.</p>
+            </div>
+          </li>
+          <li class="edu">
+            <p class="edu__when">2022 — 2024</p>
+            <div class="edu__body">
+              <p class="edu__level"><span data-i18n="edu.cfgs">Ciclo Formativo de Grado Superior</span></p>
+              <h3 class="edu__title" data-i18n="edu.design.t">Diseño Gráfico y Gestión de Empresas</h3>
+              <p class="edu__desc" data-i18n="edu.design.d">Diseño gráfico, tratamiento y composición de imágenes, herramientas de diseño digital y fundamentos de gestión y organización empresarial.</p>
+            </div>
+          </li>
+          <li class="edu">
+            <p class="edu__when">2017 — 2019</p>
+            <div class="edu__body">
+              <p class="edu__level"><span data-i18n="edu.cfgm">Ciclo Formativo de Grado Medio</span></p>
+              <h3 class="edu__title" data-i18n="edu.smr.t">Sistemas Microinformáticos y Redes</h3>
+              <p class="edu__desc" data-i18n="edu.smr.d">Montaje y mantenimiento de equipos, instalación y configuración de sistemas operativos, redes locales, servicios en red y soporte técnico.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================ CONTACTO ============================ -->
+    <section class="section" id="contacto" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="contact">
+          <p class="section__label" data-i18n="contact.label">// contacto</p>
+          <h2 class="contact__title" id="contact-title" data-i18n="contact.title">¿Hablamos?</h2>
+          <p class="contact__text" data-i18n="contact.text">Estoy abierto a oportunidades para seguir aprendiendo y ganar experiencia en proyectos reales. Si crees que puedo encajar en tu equipo o quieres comentar alguno de mis proyectos, escríbeme.</p>
+
+          <p class="contact__mail"><a class="mail-link" href="mailto:daniel.chorro.dev@gmail.com">daniel.chorro.dev@gmail.com</a></p>
+
+          <div class="contact__links">
+            <a class="btn" href="https://github.com/madebydani" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/daniel-chorro-ba2601304/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© 2026 Daniel Chorro</p>
+      <p data-i18n="footer.built">HTML, CSS y JavaScript. Sin frameworks ni rastreadores.</p>
+      <p><a href="#inicio" data-i18n="footer.top">Volver arriba ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
